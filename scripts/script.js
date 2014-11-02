@@ -1,25 +1,43 @@
+// current page
+var PAGE = 1;
+var slideAnimations = [];
+
 $(document).ready(function() {
     var swiper = $(".swiper-container").swiper({
         mode:"vertical",
-        mousewheelControl:true
+        mousewheelControl:true,
+        onSlideNext: function() {
+            PAGE++;
+            if (slideAnimations[PAGE]) {
+                slideAnimations[PAGE]();
+            }
+        },
+        onSlidePrev: function() {
+            PAGE--;
+            if (slideAnimations[PAGE]) {
+                slideAnimations[PAGE]();
+            }
+        }
     });
 
+    // toggle first slide's animation
+    slideAnimations[1]();
 
-    // code here
-    var scale = 1.1;
-    $("img").hover(function() {
-        var height = $(this).height();
-        var width = $(this).width();
-        $(this).animate({
-            width: width * scale,
-            height: height * scale
-        });
-    }, function() {
-        var height = $(this).height();
-        var width = $(this).width();
-        $(this).animate({
-            width: width / scale,
-            height: height / scale
-        });
-    });
+    // set-up items here
+    $("#start-button").click(swiper.swipeNext);
 });
+
+slideAnimations[1] = function() {
+    $("#milk-bottle")
+        .hide()
+        .delay(400)
+        .show("drop", {
+            direction: "up",
+            easing: "easeInQuad"
+        })
+        .effect("shake", {
+            direction: "down",
+            times: 2,
+            duration: 700
+        });
+};

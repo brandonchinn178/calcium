@@ -207,7 +207,9 @@ img#start-button:hover {
 }
 
 .swiper-slide.fulfilled div.next {
+    width: initial;
     bottom: 50px;
+    margin-left: 230px;
 }
 
 /* Slide 6 */

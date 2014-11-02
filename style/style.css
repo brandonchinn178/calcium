@@ -14,7 +14,7 @@ img#abh-logo {
     bottom: 20px;
     left: 20px;
     height: 100px;
-    z-index: 100;
+    z-index: 5;
 }
 
 /* All Slides */
@@ -100,6 +100,7 @@ div.swiper-slide:nth-child(1) {
 
 img#background {
     margin-left: 80px;
+    margin-top: -30px;
     width: 800px;
 }
 
@@ -255,7 +256,28 @@ img#start-button:hover {
 }
 
 .info-content .title {
+    position: fixed;
+    background: #B7D6E2;
     margin: 0;
+    padding-top: 10px;
+    padding-bottom: 0;
+    z-index: 3;
+}
+
+.info-content .title img {
+    width: 100%;
+}
+
+.info-step:nth-child(2) {
+    padding-top: 250px;
+}
+
+.info-step img {
+    height: 500px;
+}
+
+.info-step:nth-child(4) img {
+    height: 400px;
 }
 
 .info-content .whats-that img {
@@ -267,18 +289,12 @@ img#start-button:hover {
     opacity: 1.0;
 }
 
-.info-step img {
-    height: 700px;
-}
-
-.info-step:nth-child(4) img {
-    height: 600px;
-}
-
 .supplement {
+    position: relative;
     display: none;
     background: #D66527;
     padding: 50px 0;
+    z-index: 4;
 }
 
 .supplement div {
@@ -296,7 +312,7 @@ img#start-button:hover {
     text-align: center;
 }
 
-.supplement .text>img {
+.supplement .text > img {
     width: 110%;
 }
 

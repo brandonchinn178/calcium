@@ -1,6 +1,5 @@
 Calcium
 =======
+A web application that teaches the importance of calcium in a diet.
 
-iOS app for Learning About Calcium
-
-Blueprint Hackathon 2014
+Blueprint/Innovative Design Hackathon, November 2014

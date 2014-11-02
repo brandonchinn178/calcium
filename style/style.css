@@ -4,6 +4,11 @@ html, body {
     height: 100%;
 }
 
+@font-face {
+    font-family: helveticaNeue;
+    src: url(fonts/HelveticaNeueLTPro-Bd.otf);
+}
+
 /* All Slides */
 div.swiper-slide {
     position: relative;
@@ -22,6 +27,7 @@ div.food-container {
 }
 
 div.food-option {
+    position: relative;
  	display: inline-block;
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
@@ -31,15 +37,35 @@ div.food-option {
 }
  
 div.food-option:hover {
-  background: #B7D6E2;
+    cursor: pointer;
+    background: #B7D6E2;
+}
+
+div.counter {
+    margin: 2px;
+    position: absolute;
+    background: #FF5200;
+    border-radius:20px;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-family: "helveticaNeue";
+    line-height: 45px;
+    vertical-align: middle;
 }
 
 div.next {
-    cursor: pointer;
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     width: 100%;
     text-align: center;
+}
+
+div.next img {
+    cursor: pointer;
 }
 
 /* Slide 1 */

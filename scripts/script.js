@@ -28,7 +28,23 @@ $(document).ready(function() {
 
     // set-up actions here
     $("#start-button").click(swiper.swipeNext);
-    $(".next").click(swiper.swipeNext);
+    $(".next img").click(swiper.swipeNext);
+    $(".food-option.none").click(swiper.swipeNext);
+    $(".food-option").not(".none").click(function() {
+        var optionCount = $(this).find("div");
+        if (optionCount.length == 0) {
+            $("<div class='counter'>1</div>").prependTo(this);
+            counter++;
+        } else if (optionCount.text() === "3") {
+            $(optionCount).remove();
+            counter -= 3;
+        } else {
+            var next = parseInt(optionCount.text()) + 1;
+            optionCount.text(next);
+            counter++;
+        }
+        console.log(counter);
+    });
 });
 
 slideAnimations[0] = function() {
@@ -45,15 +61,3 @@ slideAnimations[0] = function() {
             duration: 700
         });
 };
-
-slideAnimations[1] = function() {
-    $(".dairy .food-option").click(function() {
-        var counter = $(this).find("p")[0];
-        if (counter === undefined) {
-            counter = $("<p>1</p>").css({borderRadius:"2em"});
-            $(this).append(counter);
-        } else if (counter.text() === "3") {
-            $(counter).remove();
-        }
-    });
-}

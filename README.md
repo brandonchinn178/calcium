@@ -4,7 +4,7 @@ A web application that teaches the importance of calcium in a diet.
 
 Scripts
 -------
-[iDangerous Swiper](http://www.idangero.us/sliders/swiper/api.php): Allows for swiping effect on page
+[iDangerous Swiper](http://www.idangero.us/sliders/swiper/index.php): Allows for swiping effect on page
 
 [jQuery](http://www.jquery.com): Allows jQuery effects and actions 
 

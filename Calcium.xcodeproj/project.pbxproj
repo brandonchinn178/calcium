@@ -10,9 +10,7 @@
 		CA03DB311A05D9D400891E22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03DB301A05D9D400891E22 /* main.m */; };
 		CA03DB341A05D9D400891E22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03DB331A05D9D400891E22 /* AppDelegate.m */; };
 		CA03DB371A05D9D400891E22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03DB361A05D9D400891E22 /* ViewController.m */; };
-		CA03DB3A1A05D9D400891E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03DB381A05D9D400891E22 /* Main.storyboard */; };
 		CA03DB3C1A05D9D400891E22 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA03DB3B1A05D9D400891E22 /* Images.xcassets */; };
-		CA03DB3F1A05D9D400891E22 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA03DB3D1A05D9D400891E22 /* LaunchScreen.xib */; };
 		CA03DB4B1A05D9D400891E22 /* CalciumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03DB4A1A05D9D400891E22 /* CalciumTests.m */; };
 /* End PBXBuildFile section */
 
@@ -34,9 +32,7 @@
 		CA03DB331A05D9D400891E22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA03DB351A05D9D400891E22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CA03DB361A05D9D400891E22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CA03DB391A05D9D400891E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA03DB3B1A05D9D400891E22 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CA03DB3E1A05D9D400891E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA03DB441A05D9D400891E22 /* CalciumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalciumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA03DB491A05D9D400891E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA03DB4A1A05D9D400891E22 /* CalciumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalciumTests.m; sourceTree = "<group>"; };
@@ -85,9 +81,7 @@
 				CA03DB331A05D9D400891E22 /* AppDelegate.m */,
 				CA03DB351A05D9D400891E22 /* ViewController.h */,
 				CA03DB361A05D9D400891E22 /* ViewController.m */,
-				CA03DB381A05D9D400891E22 /* Main.storyboard */,
 				CA03DB3B1A05D9D400891E22 /* Images.xcassets */,
-				CA03DB3D1A05D9D400891E22 /* LaunchScreen.xib */,
 				CA03DB2E1A05D9D400891E22 /* Supporting Files */,
 			);
 			path = Calcium;
@@ -199,8 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA03DB3A1A05D9D400891E22 /* Main.storyboard in Resources */,
-				CA03DB3F1A05D9D400891E22 /* LaunchScreen.xib in Resources */,
 				CA03DB3C1A05D9D400891E22 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +234,6 @@
 			targetProxy = CA03DB451A05D9D400891E22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CA03DB381A05D9D400891E22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA03DB391A05D9D400891E22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CA03DB3D1A05D9D400891E22 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA03DB3E1A05D9D400891E22 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CA03DB4C1A05D9D400891E22 /* Debug */ = {

@@ -14,6 +14,7 @@ var CALCIUM_AMOUNTS = {
     spinach: 100,
     lettuce: 75
 };
+var finished = false;
 
 $(document).ready(function() {
     var swiper = $(".swiper-container").swiper({
@@ -21,10 +22,9 @@ $(document).ready(function() {
         mousewheelControl: true,
         speed: 600,
         onSlideNext: function() {
-            if (page == swiper.slides.length - 1) {
-                return;
-            } else if (page == 3) {
+            if (page == 3) {
                 makeFinish();
+                swiper.swipeNext();
             }
             page++;
             if (slideAnimations[page]) {
@@ -86,21 +86,27 @@ $(document).ready(function() {
     };
 
     function makeFinish() {
+        if (finished) return;
         var total = 0;
         var foods = Object.keys(counter);
         for (var i = 0; i < foods.length; i++) {
             total += CALCIUM_AMOUNTS[foods] * counter[foods];
         }
         if (total >= 1300) {
-            var slide = swiper.createSlide("<div class='text'><img src='images/fulfilled.png'></div>
-                <div class='skeleton'><img src='images/100p.png'></div>
+            var slide = swiper.createSlide("<div class='text'><img src='images/fulfilled.png'></div>\
+                <div class='skeleton'><img src='images/100p.png'></div>\
                 <div class='next'><a href='rule.html'><img src='images/fullfilled-learn-more.png'></a></div>",
                 "swiper-slide fulfilled");
             slide.append();
         } else {
-            swiper.swipeTo(5);
-            page = 5;
+            var percentage = Math.floor(total/1300*10)*10;
+            var slide = swiper.createSlide("<div class='text'><img src='images/failed.png'></div>\
+                <div class='skeleton'><img src='images/" + percentage + "p.png'></div>\
+                <div class='next'><a href='rule.html'><img src='images/failed-learn-more.png'></a></div>",
+                "swiper-slide failed");
+            slide.append();
         }
+        finished = true;
     };
 
     // toggle first slide's animation

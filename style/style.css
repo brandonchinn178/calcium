@@ -4,16 +4,44 @@ html, body {
     height: 100%;
 }
 
+/* All Slides */
+div.swiper-slide {
+    position: relative;
+}
+
+div.title {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+div.food-container {
+    position: absolute;
+    left: auto;
+    right: auto;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+}
+
+div.food-option {
+    display: inline-block;
+    height: 100%;
+}
+
+div.food-option:hover {
+    background: no-repeat url(../images/selected.png);
+}
+
 /* Slide 1 */
 div.swiper-slide:nth-child(1) {
-    position: relative;
     background-color: #B7D6E2;
 }
 
 img.graphics-home {
     position: absolute;
     right: 45%;
-    bottom: -30px;
+    bottom: 0px;
 }
 
 img#banner-back {
@@ -47,21 +75,15 @@ div.swiper-slide:nth-child(2) {
     background-color: #3293AA;
 }
 
-div.food-container {
-	position:absolute;
-	left: auto;
-	width: 100%;
-	right: auto;
-	bottom: 50px;
-	text-align: center;
+div.food-option.dairy {
+    width: 200px;
 }
 
-img.option {
-	height: 150px;
-
+/* Slide 3 */
+div.swiper-slide:nth-child(3) {
+    background-color: #ECAC20;
 }
 
-img.option:hover {
-	background: url(../images/selected.png);
+div.food-option.protein {
+    width: 300px;
 }
-

@@ -5,11 +5,30 @@ html, body {
 }
 
 /* Slide 1 */
-div:nth-child(1) {
+div.swiper-slide:nth-child(1) {
     background-color: #B7D6E2;
 }
 
 /* Slide 2 */
-div:nth-child(2) {
-    background-color: white;
+div.swiper-slide:nth-child(2) {
+    background-color: #3293AA;
 }
+
+div.food-container {
+	position:absolute;
+	left: auto;
+	width: 100%;
+	right: auto;
+	bottom: 50px;
+	text-align: center;
+}
+
+img.option {
+	height: 150px;
+
+}
+
+img.option:hover {
+	background: url(../images/selected.png);
+}
+

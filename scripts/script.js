@@ -6,20 +6,22 @@ $(document).ready(function() {
 
 
     // code here
-    var scale = 1.1;
-    $("img").hover(function() {
-        var height = $(this).height();
-        var width = $(this).width();
-        $(this).animate({
-            width: width * scale,
-            height: height * scale
-        });
-    }, function() {
-        var height = $(this).height();
-        var width = $(this).width();
-        $(this).animate({
-            width: width / scale,
-            height: height / scale
-        });
-    });
+    // var scale = 1.1;
+    // $(".magnifiable").hover(function() {
+    //     var height = $(this).height();
+    //     var width = $(this).width();
+    //     $(this).animate({
+    //         width: width * scale,
+    //         height: height * scale
+    //     });
+    // }, function() {
+    //     var height = $(this).height();
+    //     var width = $(this).width();
+    //     $(this).animate({
+    //         width: width / scale,
+    //         height: height / scale
+    //     });
+    // });
+
+	
 });

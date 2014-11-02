@@ -19,7 +19,6 @@ var finished = false;
 $(document).ready(function() {
     var swiper = $(".swiper-container").swiper({
         mode: "vertical",
-        mousewheelControl: true,
         speed: 600,
         onSlideNext: function() {
             if (page == 3) {
@@ -41,12 +40,16 @@ $(document).ready(function() {
 
     // set-up actions here
     $("#start-button").click(swiper.swipeNext);
+
+    // click next buttons
     $(".next img").click(function() {
         if (page == 3) {
             makeFinish();
         }
         swiper.swipeNext();
     });
+
+    // click none option
     $(".food-option.none").click(function() {
         var optionCounters = $(this).parent().find(".counter");
         for (var i = 0; i < optionCounters.length; i++) {
@@ -54,13 +57,14 @@ $(document).ready(function() {
             counter[optionCounter.attr("id")] = 0;
             optionCounter.remove();
         }
-        swiper.swipeNext();
     });
+
+    // click a food option
     $(".food-option").not(".none").click(function() {
         var optionCount = $(this).find("div");
         var id = $(this).attr("id");
         if (optionCount.length == 0) {
-            $("<div class='counter'>1</div>").prependTo(this);
+            $("<div class='counter' id='" + id + "'>1</div>").prependTo(this);
             counter[id] = 1;
         } else if (counter[id] == 3) {
             optionCount.remove();
@@ -90,19 +94,19 @@ $(document).ready(function() {
         var total = 0;
         var foods = Object.keys(counter);
         for (var i = 0; i < foods.length; i++) {
-            total += CALCIUM_AMOUNTS[foods] * counter[foods];
+            total += CALCIUM_AMOUNTS[foods[i]] * counter[foods[i]];
         }
         if (total >= 1300) {
             var slide = swiper.createSlide("<div class='text'><img src='images/fulfilled.png'></div>\
                 <div class='skeleton'><img src='images/100p.png'></div>\
-                <div class='next'><a href='rule.html'><img src='images/fullfilled-learn-more.png'></a></div>",
+                <div class='next'><a href='info.html'><img src='images/fulfilled-learn-more.png'></a></div>",
                 "swiper-slide fulfilled");
             slide.append();
         } else {
             var percentage = Math.floor(total/1300*10)*10;
             var slide = swiper.createSlide("<div class='text'><img src='images/failed.png'></div>\
                 <div class='skeleton'><img src='images/" + percentage + "p.png'></div>\
-                <div class='next'><a href='rule.html'><img src='images/failed-learn-more.png'></a></div>",
+                <div class='next'><a href='info.html'><img src='images/failed-learn-more.png'></a></div>",
                 "swiper-slide failed");
             slide.append();
         }

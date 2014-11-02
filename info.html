@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Got Calcium? - Info</title>
+        <link rel="icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="style/style.css" />
+        <script src="scripts/jquery.min.js"></script>
+        <script>
+            var open = false;
+            $(document).ready(function() {
+                $(".whats-that").click(function() {
+                    if (open) {
+                        $(".supplement").slideUp();
+                    } else {
+                        $(".supplement").slideDown();
+                    }
+                    open = !open;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img id="abh-logo" src="images/ABH-logo.png">
+        <div class="info-content">
+            <div class="title">
+                <img src="images/remember.png">
+            </div>
+            <div class="info-step">
+                <img src="images/step1.png">
+            </div>
+            <div class="info-step">
+                <img src="images/step2.png">
+            </div>
+            <div class="info-step">
+                <img src="images/step3.png">
+            </div>
+            <div class="whats-that">
+                <img src="images/whats-that.png">
+            </div>
+        </div>
+        <div class="supplement">
+            <div class="bottle">
+                <img src="images/calcium-bottle.png">
+            </div>
+            <div class="text">
+                <img src="images/calcium-supplement.png">
+                <a href="http://facebook.com/americanbonehealth"><img src="images/facebook.png"></a>
+                <a href="http://americanbonehealth.org"><img src="images/website.png"></a>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="index.html"><img src="images/back-to-top.png"></a>
+            <br>
+            <img id="attribution" src="images/attribution.png">
+        </div>
+    </body>
+</html>

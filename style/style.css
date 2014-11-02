@@ -9,6 +9,14 @@ html, body {
     src: url(fonts/HelveticaNeueLTPro-Bd.otf);
 }
 
+img#abh-logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    height: 100px;
+    z-index: 100;
+}
+
 /* All Slides */
 div.swiper-slide {
     position: relative;
@@ -47,18 +55,11 @@ div.food-option:hover {
 }
 
 div.ghost-element {
-	 position: relative;
+	position: relative;
  	display: table-cell;
  	vertical-align: middle;
  	text-align: center;
 }
-
-/*div.food-option img {
-	margin-left: auto;
-	margin-right: auto;
-
-
-}*/
 
 div.counter {
     margin: 2px;
@@ -84,7 +85,12 @@ div.next {
 }
 
 div.next img {
+    opacity: .7;
+}
+
+div.next img:hover {
     cursor: pointer;
+    opacity: 1.0;
 }
 
 /* Slide 1 */
@@ -99,8 +105,8 @@ img#background {
 
 img.main-graphic {
     position: absolute;
-    right: 45%;
-    bottom: 0px;
+    right: 50%;
+    bottom: 50px;
 }
 
 img#banner-back {
@@ -108,6 +114,8 @@ img#banner-back {
 }
 
 img#milk-bottle {
+    right: 48%;
+    bottom: 0;
     z-index: 2;
 }
 
@@ -126,7 +134,12 @@ img#start-button {
     position: absolute;
     right: 15%;
     bottom: 220px;
+    opacity: .7;
+}
+
+img#start-button:hover {
     cursor: pointer;
+    opacity: 1.0;
 }
 
 /* Slide 2 */
@@ -208,14 +221,106 @@ img#start-button {
     left: 5%;
 }
 
+.swiper-slide.failed div.text img {
+    height: 400px;
+}
+
 .swiper-slide.failed div.skeleton {
     position: absolute;
     top: 10%;
-    right: 5%;
+    right: 10%;
 }
 
 .swiper-slide.failed div.next {
     width: initial;
-    left: 8%;
+    left: 14%;
     bottom: 20px;
+}
+
+.swiper-slide.failed div.next img {
+    height: 150px;
+}
+
+/* Info Slide */
+.info-content {
+    background: #B7D6E2;
+}
+
+.info-content div {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0 100px;
+}
+
+.info-content .title {
+    margin: 0;
+}
+
+.info-content .whats-that img {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.info-content .whats-that img:hover {
+    opacity: 1.0;
+}
+
+.info-step img {
+    height: 700px;
+}
+
+.info-step:nth-child(4) img {
+    height: 600px;
+}
+
+.supplement {
+    display: none;
+    background: #D66527;
+    padding: 50px 0;
+}
+
+.supplement div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.supplement .bottle img {
+    height: 500px;
+}
+
+.supplement .text {
+    width: 50%;
+    text-align: center;
+}
+
+.supplement .text>img {
+    width: 110%;
+}
+
+.supplement .text a img {
+    float: left;
+    height: 40px;
+}
+
+.back-to-top {
+    background: #ECAC20;
+    padding: 30px 0 10px;
+    text-align: center;
+}
+
+.back-to-top img {
+    padding: 10px 0;
+}
+
+.back-to-top a img {
+    opacity: .7;
+}
+
+.back-to-top a img:hover {
+    opacity: 1.0;
+}
+
+.back-to-top #attribution {
+    width: 700px;
 }

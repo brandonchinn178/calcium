@@ -22,13 +22,16 @@ div.food-container {
 }
 
 div.food-option {
-    cursor: pointer;
-    display: inline-block;
-    height: 100%;
+ 	display: inline-block;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;	
 }
-
+ 
 div.food-option:hover {
-    background: no-repeat url(../images/selected.png);
+  background: #B7D6E2;
 }
 
 div.next {

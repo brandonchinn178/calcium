@@ -4,8 +4,9 @@ var counter = 0;
 
 $(document).ready(function() {
     var swiper = $(".swiper-container").swiper({
-        mode:"vertical",
-        mousewheelControl:true,
+        mode: "vertical",
+        mousewheelControl: true,
+        speed: 600,
         onSlideNext: function() {
             if (page == swiper.slides.length - 1) {
                 return;

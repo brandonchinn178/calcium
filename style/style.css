@@ -10,21 +10,19 @@ div.swiper-slide {
 }
 
 div.title {
-    margin-top: 20px;
+    margin: 70px 0;
     width: 100%;
     text-align: center;
 }
 
 div.food-container {
-    position: absolute;
-    left: auto;
-    right: auto;
     width: 100%;
-    top: 45%;
+    top: 50%;
     text-align: center;
 }
 
 div.food-option {
+    cursor: pointer;
     display: inline-block;
     height: 100%;
 }
@@ -33,12 +31,20 @@ div.food-option:hover {
     background: no-repeat url(../images/selected.png);
 }
 
+div.next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
 /* Slide 1 */
 div.swiper-slide:nth-child(1) {
     background-color: #B7D6E2;
 }
 
-img.graphics-home {
+img.main-graphic {
     position: absolute;
     right: 45%;
     bottom: 0px;
@@ -71,19 +77,28 @@ img#start-button {
 }
 
 /* Slide 2 */
-div.swiper-slide:nth-child(2) {
+.swiper-slide.dairy {
     background-color: #3293AA;
 }
 
-div.food-option.dairy {
+.swiper-slide.dairy div.food-option {
     width: 200px;
 }
 
 /* Slide 3 */
-div.swiper-slide:nth-child(3) {
+.swiper-slide.protein {
     background-color: #ECAC20;
 }
 
-div.food-option.protein {
+.swiper-slide.protein div.title {
+    margin: 80px 0;
+}
+
+.swiper-slide.protein div.food-option {
     width: 300px;
+}
+
+/* Slide 4 */
+.swiper-slide.vegetables {
+    background-color: #D66527;
 }

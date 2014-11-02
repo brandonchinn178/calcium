@@ -6,7 +6,40 @@ html, body {
 
 /* Slide 1 */
 div.swiper-slide:nth-child(1) {
+    position: relative;
     background-color: #B7D6E2;
+}
+
+img.graphics-home {
+    position: absolute;
+    right: 45%;
+    bottom: -30px;
+}
+
+img#banner-back {
+    z-index: 1;
+}
+
+img#milk-bottle {
+    z-index: 2;
+}
+
+img#banner-front {
+    z-index: 3;
+}
+
+img#text-bubble {
+    position: absolute;
+    margin-right: 45%;
+    right: -210px;
+    bottom: 425px;
+}
+
+img#start-button {
+    position: absolute;
+    right: 15%;
+    bottom: 220px;
+    cursor: pointer;
 }
 
 /* Slide 2 */

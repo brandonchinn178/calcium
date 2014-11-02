@@ -24,12 +24,16 @@ div.food-container {
     width: 100%;
 	top: 50%;
     text-align: center;
+   
 }
 
 div.food-option {
+
     position: relative;
- 	display: inline-block;
- 	height: 100%;
+ 	display: table-cell;
+ 	vertical-align: middle;
+ 	text-align: center;
+ 
 
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
@@ -41,6 +45,20 @@ div.food-option {
 div.food-option:hover {
     cursor: pointer;
 }
+
+div.ghost-element {
+	 position: relative;
+ 	display: table-cell;
+ 	vertical-align: middle;
+ 	text-align: center;
+}
+
+/*div.food-option img {
+	margin-left: auto;
+	margin-right: auto;
+
+
+}*/
 
 div.counter {
     margin: 2px;
@@ -118,6 +136,7 @@ img#start-button {
 
 .swiper-slide.dairy div.food-option {
     width: 200px;
+    height: 190px;
 }
 
 .swiper-slide.dairy div.food-option:hover {
@@ -135,6 +154,7 @@ img#start-button {
 
 .swiper-slide.protein div.food-option {
     width: 300px;
+    height: 200px;
 }
 
 .swiper-slide.protein div.food-option:hover {
@@ -148,6 +168,7 @@ img#start-button {
 
 .swiper-slide.vegetables div.food-option{
 	width: 300px;
+	height: 230px;
 }
 
 

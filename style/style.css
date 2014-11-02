@@ -22,13 +22,15 @@ div.title {
 
 div.food-container {
     width: 100%;
-    top: 50%;
+	top: 50%;
     text-align: center;
 }
 
 div.food-option {
     position: relative;
  	display: inline-block;
+ 	height: 100%;
+
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
        -o-transition: all 1s ease;
@@ -38,7 +40,6 @@ div.food-option {
  
 div.food-option:hover {
     cursor: pointer;
-    background: #B7D6E2;
 }
 
 div.counter {
@@ -93,9 +94,9 @@ img#banner-front {
 
 img#text-bubble {
     position: absolute;
-    margin-right: 45%;
+    margin-right: 40%;
     right: -210px;
-    bottom: 425px;
+    bottom: 450px;
 }
 
 img#start-button {
@@ -114,6 +115,10 @@ img#start-button {
     width: 200px;
 }
 
+.swiper-slide.dairy div.food-option:hover {
+    background: #B7D6E2;
+}
+
 /* Slide 3 */
 .swiper-slide.protein {
     background-color: #ECAC20;
@@ -127,7 +132,20 @@ img#start-button {
     width: 300px;
 }
 
+.swiper-slide.protein div.food-option:hover {
+    background: #D66527;
+}
+
 /* Slide 4 */
 .swiper-slide.vegetables {
     background-color: #D66527;
+}
+
+.swiper-slide.vegetables div.food-option{
+	width: 300px;
+}
+
+
+.swiper-slide.vegetables div.food-option:hover {
+    background-color: #ECAC20;
 }

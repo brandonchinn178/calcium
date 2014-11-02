@@ -29,7 +29,15 @@ $(document).ready(function() {
     // set-up actions here
     $("#start-button").click(swiper.swipeNext);
     $(".next img").click(swiper.swipeNext);
-    $(".food-option.none").click(swiper.swipeNext);
+    $(".food-option.none").click(function() {
+        var optionCounters = $(this).parent().find(".counter");
+        for (var i = 0; i < optionCounters.length; i++) {
+            var optionCounter = $(optionCounters[i]);
+            counter -= parseInt(optionCounter.text());
+            optionCounter.remove();
+        }
+        swiper.swipeNext();
+    });
     $(".food-option").not(".none").click(function() {
         var optionCount = $(this).find("div");
         if (optionCount.length == 0) {
@@ -43,7 +51,6 @@ $(document).ready(function() {
             optionCount.text(next);
             counter++;
         }
-        console.log(counter);
     });
 });
 

@@ -8,4 +8,6 @@ Scripts
 
 [jQuery](http://www.jquery.com): Allows jQuery effects and actions 
 
+[jQuery UI](http://www.jqueryui.com): Extension on jQuery library
+
 Blueprint/Innovative Design Hackathon, November 2014

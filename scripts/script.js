@@ -3,4 +3,7 @@ $(document).ready(function() {
         mode:"vertical",
         mousewheelControl:true
     });
+
+
+    // code here
 });

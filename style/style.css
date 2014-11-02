@@ -74,6 +74,11 @@ div.swiper-slide:nth-child(1) {
     background-color: #B7D6E2;
 }
 
+img#background {
+    margin-left: 80px;
+    width: 800px;
+}
+
 img.main-graphic {
     position: absolute;
     right: 45%;
@@ -148,4 +153,40 @@ img#start-button {
 
 .swiper-slide.vegetables div.food-option:hover {
     background-color: #ECAC20;
+}
+
+/* Slide 5 */
+.swiper-slide.fulfilled {
+    background-color: #3293AA;
+}
+
+.swiper-slide.fulfilled div.text {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.swiper-slide.fulfilled div.skeleton {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.swiper-slide.fulfilled div.next {
+    bottom: 50px;
+}
+
+/* Slide 6 */
+.swiper-slide.failed {
+    background-color: #3293AA;
+}
+
+.swiper-slide.failed div.text {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.swiper-slide.failed div.next {
+    bottom: 20px;
 }
